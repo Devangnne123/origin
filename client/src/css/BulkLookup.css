@@ -1,45 +1,49 @@
-/* General Styles */
 
-.main2 {
+  
+  .main1 {
     width: 100%;
     margin: 0;
     padding: 0;
     display: flex;
+    
+    
   }
-  
-  .right-p2 {
+  .right-p1{
     display: flex;
+   
     flex-direction: column;
   }
   
-  .main-con2 {
+  .main-con1 {
     display: flex;
     width: 100%;
-    overflow-y: hidden;
+    overflow-x: hidden;
+    overflow-x: hidden;
+    /* Allow wrapping for smaller screens */
   }
   
-  /* Sidebar Styles */
-  .left-side2 {
-    width:300px;
-    min-width: 350px;
+  .left-side1 {
+    width: 350px;
+    min-width: 250px; /* Minimum width to prevent shrinking */
     height: auto;
     background: linear-gradient(to bottom, rgba(188, 189, 215, 0.5), rgba(185, 185, 185, 0.5));
     border-radius: 0 30px 30px 0;
     position: sticky;
     bottom: 0;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out; /* Smooth transition for visibility */
   }
   
-  .left-side2.visible {
-    transform: translateX(0);
+  .left-side1.visible {
+    transform: translateX(0); 
+    /* Visible state */
   }
   
-  .left-side2.hidden {
+  .left-side1.hidden {
     transform: translateX(-100%);
-    display: none;
+    display: none; /* Hidden state */
   }
   
-  .left-section2 {
+  .left-section1 {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -48,18 +52,18 @@
     padding: 10px;
   }
   
-  .User2 {
+  .User1 {
     border-radius: 30%;
-    cursor: pointer;
+    cursor: pointer; /* Indicate clickable */
   }
   
-  .logo-username2 p {
+  .logo-username1 p {
     text-indent: 10px;
     font-size: 12px;
     font-weight: lighter;
   }
   
-  .logo-username2 {
+  .logo-username1 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -71,13 +75,13 @@
     margin-top: 3%;
   }
   
-  .new2 {
+  .new1 {
     width: 60px;
     height: auto;
     margin: 10px;
   }
   
-  .user-button2 {
+  .user-button1 {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -87,7 +91,7 @@
     margin: 40px 0;
   }
   
-  .user-button2 li a {
+  .user-button1 li a {
     text-decoration: none;
     display: flex;
     color: #000000b5;
@@ -95,18 +99,18 @@
     padding-left: 10px;
   }
   
-  .user-button2 li img {
+  .user-button1 li img {
     display: flex;
     color: #000000b5;
     justify-content: start;
     position: absolute;
   }
   
-  .user-button2 li a:hover {
+  .user-button1 li a:hover {
     color: #ffffff;
   }
   
-  .user-button2 li {
+  .user-button1 li {
     padding: 12px 30px;
     width: 100%;
     height: auto;
@@ -117,20 +121,20 @@
     font-weight: bold;
   }
   
-  .user-button2 li:hover {
+  .user-button1 li:hover {
     background-color: #8e8fac;
   }
   
-  .logo-new2 {
+  .logo-new1 {
     display: flex;
     justify-content: flex-start;
   }
   
-  .main-plan2 {
+  .main-plan1 {
     margin: 0 30px 30px 30px;
   }
   
-  .plan2 {
+  .plan1 {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -141,18 +145,18 @@
     background-color: #7a7baf48;
   }
   
-  .head2{
+  .head1 {
     color: #4b68c8;
     font-weight: lighter;
   }
   
-  .desciption2 {
+  .desciption1 {
     text-align: center;
     margin: 15px;
     color: rgba(29, 29, 29, 0.733);
   }
   
-  .upgrade2 {
+  .upgrade1 {
     border-radius: 10px;
     font-size: medium;
     background-color: rgb(233, 155, 9);
@@ -160,137 +164,137 @@
     padding: 10px;
   }
   
-  /* Header Styles */
-  .main-head2 {
+  .main-head1 {
     display: flex;
-    flex-direction: column;
+   
     width: 90%;
     list-style: none;
     padding: 10px;
   }
   
-  .back2 {
+  .back1 {
     border: none;
+    display: flex;
+    flex-direction: column;
     border-radius: 70%;
     background-color: #ffffff;
     width: 50px;
     height: 50px;
-    position: absolute;
+    
     margin: 0%;
-    padding: 0%;
+    padding: 0px;
   }
   
-  .back2 img {
+  .back1 img {
     color: #7a7baf;
   }
   
-  .main-title2 {
+  .main-title1 {
     display: flex;
     flex-direction: column;
-    
+    margin-left: 40px;
     width: 100%;
     align-items: start;
     text-decoration: none;
-    margin-left: 80px;
     
   }
   
-  .title2 {
+  .title1 {
     font-size: medium;
     font-weight: bolder;
   }
   
-  .title-des2 {
+  .title-des1 {
     color: #757575;
-    font-size: smaller;
-    width: 100%;
-    justify-content: flex-start;
-    align-items: flex-start;
-    margin-bottom: 10%;
-    
+  font-size: smaller;
+  width: 100%;
+  margin: 0%;
+  
+  
   }
   
-  .title-head {
-    display: flex;
-    justify-content: center;
-    background-color: #ECE6F0;
-    padding: 10px;
-    width: 100%;
-    border-radius: 30px;
-    
-    
-  }
-  .title-head input{
-    border: none;
-    
-    border-radius: 20px;
-    background-color:#ECE6F0 ;
+
+  .title-head1 {
+    font-size: 40px;
+    margin: 0;
+    font-weight: normal;
+    color: #7a7baf;
   }
   
-  .big {
-    margin-left: 50px;
-    width: 60%;
-    
-    
-    
-    
-    
-  }
+.profile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
   
-  .credits-main2 {
+  
+  .credits-main1 {
     display: flex;
     justify-content: end;
   }
-  
-  .credits2 {
+  .credits1 {
     border: 1px solid #757575;
     color: #757575;
     background-color: #a6baee42;
     width: 100px;
-    padding: 10px;
-    display: flex;
+    padding: 2px 8px;
+    display:flex;
     justify-content: center;
     align-items: center;
-    margin-right: 2%;
+    margin: 2%;
     border-radius: 20px;
-    position: absolute;
+    font-size: small;
+    
+  }
+  .credits1 img{
+      width: 20px;
+      height: auto;
   }
   
-  /* Main Body Styles */
-  .main-body2 {
-    margin: 10px 20px;
+  
+  
+  .main-body11 {
+    margin: 0px 20px;
+    padding:0px;
   }
   
-  .main-body3 {
+  .main-body111 {
     display: flex;
     justify-content: start;
-    width: 100%;
-    margin: 10px;
+    margin: 0px 10px 10px 0px;
     border: 2px solid rgb(251, 251, 251);
-    background: linear-gradient(to bottom, rgba(122, 123, 175, 0.5), rgba(115, 115, 115, 0.5));
+    background: linear-gradient(to bottom, rgba(149, 141, 255, 0.5), rgba(200, 255, 252, 0.5));
     border-radius: 30px;
+     /* Allow wrapping for smaller screens */
   }
+
   
-  .left2 {
+  .left1 {
     margin: 40px 60px;
-    flex: 1;
-    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    min-width: 250px; /* Minimum width to prevent shrinking */
   }
   
-  .right2 img {
-    height: auto;
-    width: auto;
-    margin-top: 5%;
-    max-width: 100%;
+  .right1 img {
+    
+    width: 350px;
+    
+    max-width: 100%; /* Ensure image doesn't overflow */
+  }
+  .right1{
+    height: 250px;
   }
   
-  .left-main2 {
+  
+  .left-main1 {
     font-size: larger;
     color: #ffffff;
-    margin-top: 5%;
+    margin-top: 1%;
   }
   
-  .url-input2 input {
+  .url-input1 input {
     width: 100%;
     max-width: 250px;
     border-radius: 10px;
@@ -301,96 +305,162 @@
     color: #757575;
   }
   
-  .search-url2 {
+  .search-url1 {
     border-radius: 10px;
-    margin-top: 15px;
+    margin-top: 20px;
     padding: 5px 40px;
     background-color: #000;
     color: bisque;
   }
-  
-  .url-des2 {
+  .search-url1:hover {
+    color: #ffffff;
+  }
+  .form{
+    display: flex;
+    flex-direction: column;
+  }
+  .label{
+        width: 40%;
+        border: 1px solid #000;
+        background-color: #d1d1da;
+        padding: 5px;
+        font-size: small;
+        border-radius: 10px;
+        margin-top: 30px;
+        text-align: center;
+  }
+  .url-des1 {
     font-size: small;
-    margin-top: 10%;
+    margin-bottom: 10px;
     color: #757575;
   }
-  
+
+
+
+
+
+
+
+  /* ///table/// */
+  .history-table{
+    width: 60vw;
+    height: 25vh;
+    scrollbar-width: thin;
+    font-size: small;
+    scrollbar-color: rgb(0, 0, 0);
+    overflow-x: scroll;
+    overflow-y: scroll;
+    z-index: 1000000;
+    
+  }
+
+  .header12{
+    background-color: #819fbf;
+    
+    color: white;
+  }
+  .download-button{
+    display: flex;
+    background-color:  #819fbf;
+    padding: 10px;
+    font-size: small;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+  .download-button1{
+    display: flex;
+    background-color: #819fbf;
+    padding: 10px;
+    font-size: small;
+    border-radius: 10px;
+    
+  }
+
+
 
   
-  /* Responsive Styles */
+  /* Media Queries for Responsiveness */
   @media (max-width: 768px) {
-    .main-con {
+    .main-con1 {
+        display: flex;
       flex-direction: column;
     }
+    .main-head1{
+        width: 90%;
+    } 
   
-    .left-side {
+    .left-side1 {
       width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       border-radius: 0;
       position: static;
     }
   
-    .right-side {
+    .right-side1 {
       width: 100%;
     }
   
-    .main-title {
+    .main-title1 {
       margin-left: 50px;
       width: 100%;
+      
     }
-  
-    .title-des2 {
+    .title-des11 {
       width: 80%;
+     
+     
+      
     }
-  
-    .main-body {
-      width: 80%;
+    .main-body11{
+        width: 80%;
     }
-  
-    .main-body1 {
+    .credits-main1{
+        width: 100%;
+    }
+    .main-body111 {
       flex-direction: column;
       align-items: center;
       width: 100%;
     }
   
-    .left {
+    .left1 {
       margin: 20px;
     }
-  
-    .url-input {
+    .url-input1{
       width: 80%;
     }
-  
-    .right img {
-      margin-top: 20px;
+    .right1 img {
+      margin-top: 10px;
     }
-  
-    .title-head {
+    .title-head1 {
       font-size: 20px;
     }
   }
   
   @media (max-width: 480px) {
-    .title-head {
+    .title-head1 {
       font-size: 20px;
     }
-  
-    .title-des2 {
-      font-size: 15px;
-      margin: 10% 0%;
+    .title-des1{
+        font-size: 15px;
+        margin: 10% 0%;
     }
   
-    .credits {
+    .credits1 {
+    
       font-size: 12px;
       padding: 5px;
       margin-right: 20px;
     }
   
-    .back {
+    .back1{
       width: 40px;
       height: 40px;
     }
   
-    .back img {
+    .back1 img {
       width: 20px;
       height: 20px;
     }

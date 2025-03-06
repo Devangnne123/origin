@@ -22,6 +22,7 @@ import AllUser from "./components/AllUser";
 import AllAdmin from "./components/AllAdmin";
 import AllStatistics from "./components/AllStatistics";
 import AdminCreditReport from "./components/AdminCreditReport";
+import Services from "./components/Services";
 import UserCreditReport from "./components/UserCreditReport";
 
 import "./App.css";
@@ -52,11 +53,13 @@ function App() {
       {!isExcluded && <Header />} {/* Show Header if path is not excluded */}
       <Routes>
         <Route path="/" element={<Index />} />
+        
+        <Route path="/services" element={<Services />} />
         <Route path="/profile-lookup" element={<ProfileLookup />} />
         <Route path="/bulk-lookup" element={<BulkLookup />} />
         <Route path="/statistic" element={<Statistic />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<SignUp />} />
+        <Route path="/" element={<Login />} />
+        <Route path="/" element={<SignUp />} />
         <Route path="/add-user" element={<AddUser />} />
         <Route path="/all-admin" element={<AllAdmin />} />
         <Route path="/user-list" element={<UserList />} />

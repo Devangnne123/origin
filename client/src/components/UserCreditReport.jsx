@@ -1,8 +1,14 @@
 import React, { useState, useEffect } from "react";
 import Sidebar from "../components/Sidebar";
+import { CiCircleMore } from "react-icons/ci";
+
+import "../css/UserS.css";
 
 const UserCreditReport = () => {
   const [transactions, setTransactions] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [showSidebar, setShowSidebar] = useState(true);
+   const [searchTerm, setSearchTerm] = useState("");
   const userEmail =
     JSON.parse(sessionStorage.getItem("user"))?.email || "Guest";
 
@@ -26,21 +32,60 @@ const UserCreditReport = () => {
   };
 
   return (
-    <div className="dashboard">
-      <Sidebar userEmail={userEmail} />
-      <div className="main-content">
-        <h3>Credit / Debit Report</h3>
-        <table className="transaction-table">
-          <thead>
-            <tr>
+    <div className="main1">
+      <div className="main-con1">
+        {showSidebar && <Sidebar userEmail={userEmail} />}
+        <div className="main-content1">
+          <div className="right-side1">
+            <div className="right-p1">
+              <nav className="main-head1">
+                <li>
+                  <CiCircleMore
+                    className="back1 scroll-button"
+                    onClick={() => setShowSidebar(!showSidebar)}
+                  />
+                </li>
+                <div className="main-title1">
+                  <li className="profile">
+                    <p className="title1">User Statistics</p>
+                  </li>
+                  <li>
+                    <p className="title-des1">
+                      Enrich your data in bulk with our lookup tool
+                    </p>
+                  </li>
+                </div>
+              </nav>
+              <section>
+                <div className="main-body110">
+                  
+                  <div className="main-body-u">
+                    
+                  <div className={`left11 ${!showSidebar ? "expanded" : ""}`}>
+                  
+                      <div className="statistics-page">
+                      <input
+                              type="text"
+                              placeholder="Search by Email or Phone..."
+                              value={searchTerm}
+                              onChange={(e) => setSearchTerm(e.target.value)}
+                              className="search-input1"
+                            />
+                     
+                      
+                          <div className="table-container">
+                           
+                            <table className="statistics-table">
+                              <thead>
+                              <tr>
               <th>Date</th>
               <th>Sender Email</th> {/* New Column */}
               <th>Transaction</th>
               <th>Amount</th>
               <th>Remaining Credits</th>
             </tr>
-          </thead>
-          <tbody>
+                              </thead>
+                              <tbody>
             {transactions.length === 0 ? (
               <tr>
                 <td colSpan="5">No transactions found.</td>
@@ -65,10 +110,19 @@ const UserCreditReport = () => {
               ))
             )}
           </tbody>
-        </table>
+                            </table>
+                          </div>
+                       
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
 };
-
 export default UserCreditReport;

@@ -29,7 +29,7 @@ function MobileEnrichment() {
           Gather real-time contact and company data from a Mobile Number with
           our Mobile enrichment tool made for businesses.
         </p>
-        <div className="input-container">
+        <div className="input-container1">
           <input
             type="url"
             placeholder="Enter a LinkedIn profile link"

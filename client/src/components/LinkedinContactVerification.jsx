@@ -15,7 +15,7 @@ function LinkedinContactVerification() {
           Ensure the validity of Mobile Number in real-time with our Mobile
           verification tool designed for businesses.
         </p>
-        <div className="input-container">
+        <div className="input-container1">
           <input
             type="email"
             placeholder="Try an email address"

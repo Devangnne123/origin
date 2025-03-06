@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Sidebar from "../components/Sidebar";
-import "../css/UserList.css";
+import { CiCircleMore } from "react-icons/ci";
+import "../css/UserS.css";
 
 const AddUser = () => {
   const [email, setEmail] = useState("");
@@ -9,6 +10,7 @@ const AddUser = () => {
   const [credits, setCredits] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
+   const [showSidebar, setShowSidebar] = useState(true);
   const navigate = useNavigate();
 
   const userEmail = JSON.parse(sessionStorage.getItem("user"))?.email || "Guest";
@@ -70,16 +72,41 @@ const AddUser = () => {
   
 
   return (
-    <>
-      <div className="dashboard">
-        <Sidebar userEmail={userEmail} />
-
-        <div className="main-content">
-          <div className="header">
-            <h1 className="profile-lookup">Add User</h1>
-          </div>
-
-          <div className="add-user-form-container">
+    <div className="main1">
+    <div className="main-con1">
+      {showSidebar && <Sidebar userEmail={userEmail} />}
+      <div className="main-content1">
+        <div className="right-side1">
+          <div className="right-p1">
+            <nav className="main-head1">
+              <li>
+                <CiCircleMore
+                  className="back1 scroll-button"
+                  onClick={() => setShowSidebar(!showSidebar)}
+                />
+              </li>
+              <div className="main-title1">
+                <li className="profile">
+                  <p className="title1">User Statistics</p>
+                </li>
+                <li>
+                  <p className="title-des1">
+                    Enrich your data in bulk with our lookup tool
+                  </p>
+                </li>
+              </div>
+            </nav>
+            <section>
+              <div className="main-body110">
+                
+                <div className="main-body-u">
+                  
+                <div className={`left1 ${!showSidebar ? "expanded" : ""}`}>
+                
+                    <div className="statistics-page">
+                    
+                       
+                         <div className="add-user-form-container">
             <form onSubmit={handleAddUser}>
               <div>
                 <input
@@ -110,16 +137,27 @@ const AddUser = () => {
 
               {errorMessage && <p className="error-message">{errorMessage}</p>}
               <div>
-                <button type="submit" disabled={isSubmitting}>
+                <button  className="adduser" type="submit" disabled={isSubmitting}>
                   {isSubmitting ? "Adding..." : "Add User"}
                 </button>
               </div>
             </form>
           </div>
+                         
+                        
+                     
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
         </div>
       </div>
-    </>
-  );
+    </div>
+  </div>
+);
 };
+
 
 export default AddUser;

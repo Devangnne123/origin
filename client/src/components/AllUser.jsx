@@ -70,6 +70,7 @@ const AllUser = () => {
           <table>
             <thead>
               <tr>
+                <th>Sr No.</th>
                 <th>User Email</th>
                 <th>User Password</th>
                 <th>Company Name</th>
@@ -80,8 +81,9 @@ const AllUser = () => {
             </thead>
             <tbody>
               {filteredUsers.length > 0 ? (
-                filteredUsers.map((user) => (
+                filteredUsers.map((user,index) => (
                   <tr key={user._id}>
+                    <td>{index + 1}</td>
                     <td>{user.userEmail || "N/A"}</td>
                     <td className="password-cell">
                       {visiblePasswords[user._id] ? user.userPassword : "••••••••"}

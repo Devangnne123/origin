@@ -102,7 +102,7 @@
 }
 
 .user-table th {
-  background-color: #007bff;
+  background-color: #000000;
   color: white;
   text-transform: uppercase;
 }
@@ -154,7 +154,7 @@
 
 /* Styling the Update button */
 button {
-  background-color: #4caf50; /* Green background */
+ 
   color: white; /* White text */
   padding: 10px 10px; /* Padding for the button */
   border: none; /* Remove border */
@@ -163,9 +163,7 @@ button {
   transition: background-color 0.3s ease; /* Smooth background color transition */
 }
 
-button:hover {
-  background-color: #45a049; /* Darker green on hover */
-}
+
 
 /* Styling the textbox for entering credits */
 input[type="number"] {
@@ -179,5 +177,5 @@ input[type="number"] {
 
 input[type="number"]:focus {
   outline: none; /* Remove the outline when the input is focused */
-  border-color: #4caf50; /* Green border when focused */
+  border-color: #0c0c0c; /* Green border when focused */
 }

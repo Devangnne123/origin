@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
+import { IoArrowBackCircle } from "react-icons/io5";
 import Sidebar from "../components/Sidebar";
 import "../css/ProfileLookup.css";
+
 
 const ProfileLookup = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -8,6 +10,7 @@ const ProfileLookup = () => {
   const [resultData, setResultData] = useState(null);
   const [showModal, setShowModal] = useState(false);
   const [lookupCount, setLookupCount] = useState(0);
+  const [showSidebar, setShowSidebar] = useState(true);
 
   const user = JSON.parse(sessionStorage.getItem("user"));
   const userEmail = user?.email || "Guest";
@@ -20,7 +23,7 @@ const ProfileLookup = () => {
       fetchUserStatistics(); // Fetch user statistics
     }
   }, []);
-
+      
   // Fetch user credits from the database
   const fetchUserCredits = async () => {
     try {
@@ -102,7 +105,7 @@ const ProfileLookup = () => {
         const duplicateCount = (userStats[userEmail]?.duplicateCount || 0) + (isDuplicate ? 1 : 0);
         const netNewCount = (userStats[userEmail]?.netNewCount || 0) + (isDuplicate ? 0 : 1);
         const newEnrichedCount = (userStats[userEmail]?.newEnrichedCount || 0) + 1;
-        const creditUsed = 5;
+        const creditUsed = (userStats[userEmail]?.creditUsed || 0) + 5;
         const remainingCredits = Math.max(0, lookupCount - 5);
 
         // Update statistics
@@ -150,29 +153,76 @@ const ProfileLookup = () => {
   };
 
   return (
-    <div className="dashboard">
-      <Sidebar userEmail={userEmail} />
-      <div className="main-content">
-        <div className="header">
-          <h1 className="profile-lookup">Profile Lookup</h1>
-          <p>Your Remaining Lookups: {lookupCount}</p>
+    <div className="main">
+      <div className="main-con">
+      {showSidebar && <Sidebar userEmail={userEmail} />} 
+      
+      <div className="right-side">
+          <div className="right-p">
+          <nav className="main-head">
+            <li>
+              <IoArrowBackCircle className="back1" onClick={() => setShowSidebar(!showSidebar)} /> 
+            </li>
+            
+            <div className="main-title">
+              <li className="profile">
+                <p className="title">Profile Lookup</p>
+                <li className="credits-main1">
+            <h5 className="credits1">
+              <img
+               
+                src="https://img.icons8.com/external-flaticons-flat-flat-icons/50/external-credits-university-flaticons-flat-flat-icons.png"
+                alt="external-credits-university-flaticons-flat-flat-icons"
+              />
+              Credits:{lookupCount}
+            </h5>
+          </li>
+
+              </li>
+              <li>
+                <p className="title-des2">
+                  Retrieve contact and company data in real time using our OSINT methods.
+                  <br />
+                  Just provide the input and access the data you need instantly
+                </p>
+              </li>
+              <li className="title-head">
+                Explore Real-Time Data
+              </li>
+            </div>
+          </nav>
+          <section>
+            <div className="main-body0">
+              <div className="main-body1">
+                <div className="left">
+                  <div className="left-main">LinkedIn URL</div>
+                  <form action="">
+                    <div className="url-input">
+                      <input type="url" placeholder="Enter your url" 
+                      value={linkedinLink}
+                      onChange={(e) => setLinkedinLink(e.target.value)}
+                      />
+                    </div>
+                    <button className="search-url" 
+                    onClick={handleSearch}
+                    disabled={lookupCount <= 0}>
+                    {isLoading ? "Searching..." : "Search"}
+                    </button>
+                    <div className="url-des">
+                      <p>
+                        Retrieve all profile or company data on LinkedIn using our LinkedIn Finder URL.
+                      </p>
+                    </div>
+                  </form>
+                </div>
+                <div className="right">
+                  <img src="linkdin1.png" alt="" />
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
-        <div className="explore-section">
-          <div className="search-box">
-            <input
-              type="url"
-              placeholder="Enter a LinkedIn profile link"
-              value={linkedinLink}
-              onChange={(e) => setLinkedinLink(e.target.value)}
-            />
-            <button
-              className="search-button"
-              onClick={handleSearch}
-              disabled={lookupCount <= 0}
-            >
-              {isLoading ? "Searching..." : "Search"}
-            </button>
-          </div>
+        </div>
 
           {showModal && resultData && (
             <div className="modal-overlay-1">
@@ -181,7 +231,7 @@ const ProfileLookup = () => {
                   className="close-button"
                   onClick={() => setShowModal(false)}
                 >
-                  ×
+                  
                 </button>
                 <div className="modal-header-1">
                   <h2>LinkedIn Profile Data</h2>
@@ -230,8 +280,9 @@ const ProfileLookup = () => {
             </div>
           )}
         </div>
-      </div>
-    </div>
+        </div>
+      
+    
   );
 };
 

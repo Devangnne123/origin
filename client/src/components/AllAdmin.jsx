@@ -128,6 +128,7 @@ const AllAdmin = () => {
           <table>
             <thead>
               <tr>
+                <th>Sr No.</th>
                 <th>User Email</th>
                 <th>Password</th>
                 <th>Company Name</th>
@@ -140,6 +141,7 @@ const AllAdmin = () => {
               {users.length > 0 ? (
                 users.map((user, index) => (
                   <tr key={index}>
+                    <td>{index + 1}</td>
                     <td>{user.userEmail || "N/A"}</td>
                     <td>
                       {showPasswords[user.userEmail]
