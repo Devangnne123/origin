@@ -274,6 +274,8 @@ body{
       justify-content: center;
       flex-wrap: wrap;
       
+      
+      
     }
      .servicesContainer{
        display: flex;
@@ -298,7 +300,8 @@ body{
    
   .service{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
   }
      .SERVICES{
        display: flex;
@@ -489,6 +492,7 @@ body{
    .servicesDescription1{
   
     margin-top: 60px;
+    margin-right: 40px;
     
     
  }
@@ -506,7 +510,7 @@ body{
     text-align: justify;
    margin-top: 50px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    width: 70%;
+    width: 60%;
 
   }
    .serviceHeading{

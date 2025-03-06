@@ -349,39 +349,41 @@ html {
   }
 }
 
-/* General Footer Styles */
-footer {
-  background-color: #f8f9fa;
-  width: 92%; /* Full width */
-  padding: 40px 0;
-  /* border-top: 1px solid #ddd; */
-}
+
 
 .footer-container {
   width: 100%; /*  Full width */
   margin: 0 auto;
-  padding: 0 20px; /*  Adjust padding for responsiveness */
+  padding: 0 0px; /*  Adjust padding for responsiveness */
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
 .footer-section {
-  margin: 10px 0;
+  
   gap: 20%;
 }
 
-.footer-section h3,
+
 .footer-section h4 {
   font-size: 18px;
   font-weight: bold;
-  margin-bottom: 10px;
+  
+  color: #000;
+}
+.footer-section h3{
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 30px;
   color: #000;
 }
 
+
 .footer-section p {
-  color: #555;
-  margin: 0 0 10px;
+  color: #909090;
+  font-size: larger;
+
 }
 
 .footer-section ul {
@@ -436,41 +438,8 @@ footer {
   font-weight: 500;
 }
 
-.footer-links {
-  text-align: center;
-  margin-top: 10px;
-  padding-left: 140px;
-}
 
-.footer-links a {
-  margin-right: 40px;
-  font-size: 10px;
-  text-decoration: none;
-  color: #555;
-  transition: color 0.3s ease;
-}
 
-.footer-links a:hover {
-  color: #000;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .footer-container {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0 10px; /* Adjust padding for smaller screens */
-  }
-
-  .footer-section {
-    flex: 1 1 100%; /* Footer sections will stack on smaller screens */
-    margin-bottom: 20px; /* Add space between sections */
-  }
-
-  .footer-bottom {
-    padding: 15px 0;
-  }
-}
 
 .modal-overlay {
   position: fixed;
