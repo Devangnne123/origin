@@ -211,7 +211,9 @@ const UserList = () => {
                         ) : users.length === 0 ? (
                           <p>No users found.</p>
                         ) : (
-                          <table className="user-table">
+                          <div className="table-container">
+                          <table className="statistics-table">
+                          
                             <thead>
                               <tr>
                                 <th>Sr No</th>
@@ -270,6 +272,7 @@ const UserList = () => {
                               ))}
                             </tbody>
                           </table>
+                          </div>
                         )}
                       </div>
                     </div>

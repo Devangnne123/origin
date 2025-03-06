@@ -245,12 +245,7 @@ body {
   color: #7a7baf;
 }
 
-.profile {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
+
 .credits-main {
   display: flex;
   justify-content: end;
@@ -495,12 +490,15 @@ body {
 
 @media (max-width: 480px) {
   .title-head {
-    font-size: 20px;
+    font-size: 25px;
+    width: 250px;
   }
 
   .title-des2 {
     font-size: 15px;
     margin: 10% 0%;
+    width: 200px;
+    
   }
 
   .credits {
@@ -517,5 +515,21 @@ body {
   .back img {
     width: 20px;
     height: 20px;
+  }
+  .profile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+  }
+  .main-title {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    width: 100%;
+    align-items: start;
+    text-decoration: none;
+    
+    
   }
 }

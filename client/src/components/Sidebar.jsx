@@ -30,7 +30,7 @@ import "../css/Sidebar.css";
       options: [
         { name: "Add User", path: "/add-user" },
         { name: "User Lists", path: "/user-list" },
-        { name: "Sign out" },
+        { name: "Sign out",path: "/" },
       ],
     },     {
       name: "Statistics",
@@ -64,7 +64,7 @@ import "../css/Sidebar.css";
       icon:<IoMdSettings />,
       options: [
       
-        { name: "Sign out" },
+        { name: "Sign out",path: "/" },
       ],
     }, 
   ];
@@ -141,10 +141,12 @@ import "../css/Sidebar.css";
             </li>
           ))}
         {roleId === "1" && (
+          <div className="start">
         <div className="start-plan">
           <h3>Start Your Plan</h3>
           <p className="up">Upgrade your plan to unlock additional features and access more credits.</p>
           <button className="upgrade">Upgrade</button>
+        </div>
         </div>
       )}
       </nav>
