@@ -9,8 +9,7 @@ function footer() {
         <div className="footer-container1">
           <div className="footer-section">
             <div className='footer-title'>
-            <h3> B2B DIRECT DATA 
-            <p>Data enrichment for Business</p></h3>
+            <h3> <img width="150px" src="new.png" alt="" /><br /></h3>
             </div>
             <div className="social-icons">
               <a href="#">
@@ -24,6 +23,7 @@ function footer() {
               </a>
               <a href="#"><img width="48" height="48" src="https://img.icons8.com/color/48/whatsapp--v1.png" alt="whatsapp--v1"/></a>
             </div>
+            
           </div>
           <div className='menu-product'>
           <div className="footer-section">

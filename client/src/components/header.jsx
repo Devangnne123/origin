@@ -42,13 +42,13 @@ function Header() {
             </li>
             
             <li>
-              <a href="#">API Reference</a>
+              <a href="/api">API Reference</a>
             </li>
             <li>
-              <a href="#">About Us</a>
+              <a href="">About Us</a>
             </li>
             <li>
-              <a href="#">Contact</a>
+              <a href="/contactus">Contact</a>
             </li>
             
           </ul>

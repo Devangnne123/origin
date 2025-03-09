@@ -137,7 +137,7 @@
   background-color: black;
  }
  button:hover{
-  color: #000000cb;
+  background-color: #dadadacb;
  }
 .extra-links {
   text-align: center;
@@ -261,6 +261,9 @@
 .highlight-text {
   color: rgb(32, 1, 115);
   
+}
+.refresh-captcha:hover{
+      background-color: #a0a0a0;
 }
 
 .login-illustration1 {

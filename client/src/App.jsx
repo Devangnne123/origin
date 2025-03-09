@@ -24,6 +24,8 @@ import AllStatistics from "./components/AllStatistics";
 import AdminCreditReport from "./components/AdminCreditReport";
 import Services from "./components/Services";
 import UserCreditReport from "./components/UserCreditReport";
+import Api from "./components/Api";
+import ContactUs from "./components/ContactUs";
 
 import "./App.css";
 
@@ -60,6 +62,8 @@ function App() {
         <Route path="/statistic" element={<Statistic />} />
         <Route path="/" element={<Login />} />
         <Route path="/" element={<SignUp />} />
+        <Route path="/api" element={<Api />} />
+        <Route path="/contactus" element={<ContactUs />}/>
         <Route path="/add-user" element={<AddUser />} />
         <Route path="/all-admin" element={<AllAdmin />} />
         <Route path="/user-list" element={<UserList />} />

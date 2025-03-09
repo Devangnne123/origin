@@ -369,8 +369,11 @@ html {
 .footer-section h4 {
   font-size: 18px;
   font-weight: bold;
+  text-decoration: underline;
+  text-underline-offset: 10px;
   
-  color: #000;
+
+  color: #313131;
 }
 .footer-section h3{
   font-size: 18px;
@@ -407,13 +410,7 @@ html {
 }
 
 /* Footer Icons */
-.footer-icons img,
-.social-icons img {
-  margin-right: 10px;
-  display: inline-block;
-  vertical-align: middle;
-  /* border-radius: 4px; */
-}
+
 
 .footer-icons img {
   width: 40px;
